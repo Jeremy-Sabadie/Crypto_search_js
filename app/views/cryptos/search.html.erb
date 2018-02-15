@@ -1,0 +1,14 @@
+<h1>Search Cryptos</h1>
+
+<%= form_tag(cryptos_search_path, method: "get") do |f| %>
+    <%= label_tag :devise %><br>
+    <%= select_tag :devise, options_for_select(@name)  %>
+    <%= submit_tag("Search") %>
+<% end %>
+
+
+
+<%unless @devise == 0 %>
+<p> Devise :  <%= @devise %></p>
+ <p> Price : <%= @price %></p>
+<% end %>
